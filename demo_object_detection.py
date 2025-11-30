@@ -26,6 +26,7 @@ class MetaGlassesDemo:
         self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
         self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
         print("✅ Camera initialized successfully")
+        time.sleep(2)  # Allow camera to warm up
         
     def run_demo(self):
         print("\n🚀 Starting Smart Meta Glasses Demo")

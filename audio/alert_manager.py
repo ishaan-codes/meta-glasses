@@ -24,8 +24,8 @@ class AlertManager:
             'priority': priority,
             'timestamp': time.time()
         })
-        # Sort by priority (highest first)
-        self.alert_queue.sort(key=lambda x: x['priority'], reverse=True)
+        # Sort by priority value (highest first) - FIXED LINE
+        self.alert_queue.sort(key=lambda x: x['priority'].value, reverse=True)
         
         # Process alerts if not already processing
         if not self.is_processing:
